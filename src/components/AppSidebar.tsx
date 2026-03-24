@@ -1,4 +1,4 @@
-import { LayoutDashboard, ClipboardList, IndianRupee, Package, ShoppingCart, Bot, Bell } from "lucide-react";
+import { LayoutDashboard, ClipboardList, IndianRupee, Package, ShoppingCart, Bot, Bell, Trash2 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -21,6 +21,7 @@ const navItems = [
   { title: "Costs", url: "/costs", icon: IndianRupee },
   { title: "Inventory", url: "/inventory", icon: Package },
   { title: "Procurement", url: "/procurement", icon: ShoppingCart },
+  { title: "Wastage & Alerts", url: "/wastage", icon: Trash2 },
   { title: "AI Assistant", url: "/ai-assistant", icon: Bot },
 ];
 

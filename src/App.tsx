@@ -11,6 +11,8 @@ import CostsPage from "./pages/CostsPage";
 import InventoryPage from "./pages/InventoryPage";
 import ProcurementPage from "./pages/ProcurementPage";
 import AIAssistantPage from "./pages/AIAssistantPage";
+import CartPage from "./pages/CartPage";
+import WastagePage from "./pages/WastagePage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
             <Route path="/costs" element={<CostsPage />} />
             <Route path="/inventory" element={<InventoryPage />} />
             <Route path="/procurement" element={<ProcurementPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/wastage" element={<WastagePage />} />
             <Route path="/ai-assistant" element={<AIAssistantPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
