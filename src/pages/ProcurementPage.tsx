@@ -168,22 +168,7 @@ export default function ProcurementPage() {
         </CardContent>
       </Card>
 
-      {/* AI Recommendations */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg gradient-gold shrink-0"><Sparkles className="h-4 w-4 text-accent-foreground" /></div>
-            <div className="space-y-2">
-              <p className="font-display font-medium text-sm">Smart Procurement Suggestions</p>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
-                <li>• <strong>Bulk buy opportunity:</strong> Dal prices are expected to rise 8% next week. Order 100kg now to save ₹4,400.</li>
-                <li>• <strong>Vendor switch:</strong> Kerala Traders offers coconut oil at ₹180/L vs current ₹200/L. Annual savings: ₹4,800.</li>
-                <li>• <strong>Combined delivery:</strong> Merge ORD-001 & ORD-003 paneer orders for 15% volume discount from Amul.</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+
 
       {/* Item Detail Dialog */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
