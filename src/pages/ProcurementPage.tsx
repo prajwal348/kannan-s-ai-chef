@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { procurementList } from "@/data/dummy";
-import { ShoppingCart, Download, Sparkles } from "lucide-react";
+import { ShoppingCart, Download } from "lucide-react";
 import {
   Dialog,
   DialogContent,
