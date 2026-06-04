@@ -3,7 +3,7 @@ import { orders } from "@/data/dummy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Users, MapPin, Phone, ChefHat, Sparkles } from "lucide-react";
+import { ArrowLeft, Clock, Users, MapPin, Phone, ChefHat } from "lucide-react";
 
 const statusColor = {
   "Confirmed": "bg-info/10 text-info border-info/20",
