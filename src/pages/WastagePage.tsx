@@ -41,8 +41,8 @@ export default function WastagePage() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <h1 className="text-2xl md:text-3xl font-display font-semibold">Food Wastage & Market Intelligence</h1>
-        <p className="text-muted-foreground text-sm mt-1">Progressive wastage tracking from last 10 orders & geopolitical impact alerts</p>
+        <h1 className="text-2xl md:text-3xl font-display font-semibold">Food Wastage Analysis</h1>
+        <p className="text-muted-foreground text-sm mt-1">Progressive wastage tracking from last 10 orders</p>
       </div>
 
       {/* Wastage KPIs */}
