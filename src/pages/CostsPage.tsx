@@ -92,26 +92,6 @@ export default function CostsPage() {
           </CardContent>
         </Card>
       </div>
-
-      {/* AI Insights */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg gradient-gold shrink-0">
-              <Sparkles className="h-4 w-4 text-accent-foreground" />
-            </div>
-            <div className="space-y-2">
-              <p className="font-display font-medium text-sm">AI Cost Insights</p>
-              <ul className="text-xs text-muted-foreground space-y-1.5 leading-relaxed">
-                <li>• <strong>Fuel costs spiked 14%</strong> in December due to peak wedding season — consider bulk gas contracts for next season.</li>
-                <li>• <strong>Wastage detected:</strong> Dairy products show 12% higher consumption than required for last 3 events. Review portion sizing.</li>
-                <li>• <strong>Upcoming forecast:</strong> April pipeline (2 weddings) will require ~₹6.8L in total costs. Budget accordingly.</li>
-                <li>• <strong>Optimization:</strong> Switching from Vendor A to Vendor B for spices can save ₹4,200/month based on price comparison.</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 }
