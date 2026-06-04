@@ -115,24 +115,6 @@ export default function InventoryPage() {
           </div>
         </CardContent>
       </Card>
-
-      {/* AI Insights */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg gradient-gold shrink-0"><Sparkles className="h-4 w-4 text-accent-foreground" /></div>
-            <div className="space-y-2">
-              <p className="font-display font-medium text-sm">AI Stock Predictions</p>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
-                <li>• <strong>Toor Dal</strong> will deplete by Mar 27 based on current order pipeline. Reorder immediately.</li>
-                <li>• <strong>Red Chilli Powder</strong> — only 3kg remaining. Required: ~6kg for upcoming events.</li>
-                <li>• <strong>Coconut Oil</strong> usage is 40% above normal — check for possible wastage.</li>
-                <li>• <strong>Onions</strong> are overstocked (200kg). Consider reducing next order or finding alternative usage.</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 }
