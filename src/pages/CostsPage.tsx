@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { monthlyCosts } from "@/data/dummy";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, Legend, AreaChart, Area } from "recharts";
-import { IndianRupee, TrendingDown, TrendingUp, Sparkles } from "lucide-react";
+import { IndianRupee, TrendingDown, TrendingUp } from "lucide-react";
 
 export default function CostsPage() {
   const latest = monthlyCosts[monthlyCosts.length - 1];
