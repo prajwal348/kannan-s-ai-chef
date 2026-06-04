@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, TrendingDown, TrendingUp, AlertTriangle, Globe } from "lucide-react";
+import { TrendingDown, TrendingUp, AlertTriangle } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from "recharts";
 
 // Simulated wastage data from last 10 orders
@@ -34,50 +34,6 @@ const trendChartData = wastageData.map((d) => ({
   Paneer: d.paneer,
 }));
 
-// Geopolitical alerts
-const geoAlerts = [
-  {
-    severity: "High" as const,
-    title: "Cooking Oil Price Surge Expected",
-    description: "Indonesia's palm oil export ban extension may increase coconut & sunflower oil prices by 15-20% in the next 2 weeks.",
-    impact: "Oil, Ghee",
-    date: "Mar 24, 2026",
-  },
-  {
-    severity: "Medium" as const,
-    title: "LPG Subsidy Revision",
-    description: "Government reviewing commercial LPG pricing. Expect 8-12% hike in fuel costs from April.",
-    impact: "Fuel/Gas Costs",
-    date: "Mar 22, 2026",
-  },
-  {
-    severity: "Low" as const,
-    title: "Good Monsoon Forecast for Kerala",
-    description: "Favorable monsoon prediction may stabilize coconut and spice prices by Q3 2026.",
-    impact: "Coconut, Spices",
-    date: "Mar 20, 2026",
-  },
-  {
-    severity: "High" as const,
-    title: "Sugar Export Restrictions",
-    description: "India may extend sugar export curbs. Domestic sugar prices likely to drop 5%, benefiting dessert-heavy menus.",
-    impact: "Sugar, Jaggery",
-    date: "Mar 18, 2026",
-  },
-  {
-    severity: "Medium" as const,
-    title: "Tomato Supply Disruption — Karnataka",
-    description: "Unseasonal rains in Karnataka damaging tomato crops. Prices expected to spike 30-40% in South India.",
-    impact: "Tomatoes, Vegetables",
-    date: "Mar 23, 2026",
-  },
-];
-
-const severityStyle = {
-  High: "bg-destructive/10 text-destructive border-destructive/20",
-  Medium: "bg-warning/10 text-warning border-warning/20",
-  Low: "bg-success/10 text-success border-success/20",
-};
 
 export default function WastagePage() {
   const totalAvgWastage = avgWastage.reduce((s, a) => s + a.avg, 0);
@@ -85,8 +41,8 @@ export default function WastagePage() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <h1 className="text-2xl md:text-3xl font-display font-semibold">Food Wastage & Market Intelligence</h1>
-        <p className="text-muted-foreground text-sm mt-1">Progressive wastage tracking from last 10 orders & geopolitical impact alerts</p>
+        <h1 className="text-2xl md:text-3xl font-display font-semibold">Food Wastage Analysis</h1>
+        <p className="text-muted-foreground text-sm mt-1">Progressive wastage tracking from last 10 orders</p>
       </div>
 
       {/* Wastage KPIs */}
@@ -169,53 +125,6 @@ export default function WastagePage() {
           </div>
         </CardContent>
       </Card>
-
-      {/* AI Wastage Insights */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg gradient-gold shrink-0"><Sparkles className="h-4 w-4 text-accent-foreground" /></div>
-            <div className="space-y-2">
-              <p className="font-display font-medium text-sm">AI Wastage Reduction Insights</p>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
-                <li>• <strong>Vegetables over-ordered by ~25%</strong> consistently. Reduce prep quantities by 3 kg per 100 pax event.</li>
-                <li>• <strong>Rice wastage spikes</strong> on corporate events — guests prefer variety rice over plain. Adjust ratios.</li>
-                <li>• <strong>Paneer wastage low</strong> — current ordering pattern is well-optimized. Maintain.</li>
-                <li>• <strong>Progressive trend:</strong> Overall wastage reduced 8% from ORD-096 to ORD-005. Keep optimizing portions.</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Geopolitical Alerts Section */}
-      <div className="pt-2">
-        <div className="flex items-center gap-2 mb-4">
-          <Globe className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-display font-semibold">Geopolitical & Market Alerts</h2>
-        </div>
-        <p className="text-muted-foreground text-sm mb-4">Issues affecting supply chain, ingredient prices, and operational costs</p>
-
-        <div className="space-y-3">
-          {geoAlerts.map((alert, i) => (
-            <Card key={i} className="shadow-luxury border-border/50 hover:border-primary/20 transition-colors">
-              <CardContent className="p-4 flex gap-4">
-                <div className="shrink-0 mt-0.5">
-                  <Badge variant="outline" className={severityStyle[alert.severity]}>{alert.severity}</Badge>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-medium text-sm">{alert.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{alert.description}</p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <span className="text-xs text-muted-foreground">Impact: <strong className="text-foreground">{alert.impact}</strong></span>
-                    <span className="text-xs text-muted-foreground">{alert.date}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { orders } from "@/data/dummy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Users, MapPin, Phone, ChefHat, Sparkles } from "lucide-react";
+import { ArrowLeft, Clock, Users, MapPin, Phone, ChefHat } from "lucide-react";
 
 const statusColor = {
   "Confirmed": "bg-info/10 text-info border-info/20",
@@ -115,32 +115,7 @@ export default function OrderDetailPage() {
         </Card>
       )}
 
-      {/* AI Prep Plan */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-base font-display flex items-center gap-2"><Sparkles className="h-4 w-4 text-gold" /> AI Preparation Plan</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 text-sm">
-          <div>
-            <p className="font-medium text-gold mb-1">Kitchen Workflow</p>
-            <ol className="list-decimal list-inside space-y-1 text-muted-foreground">
-              <li>Prep base ingredients (rice, dal, spice mixes) — Day before, 6:00 AM</li>
-              <li>Prepare starters and marinations — Day before, 2:00 PM</li>
-              <li>Morning of event: Start main course preparation — 5:00 AM</li>
-              <li>Desserts and beverages — 8:00 AM</li>
-              <li>Final plating and transport — 10:00 AM</li>
-            </ol>
-          </div>
-          <div>
-            <p className="font-medium text-gold mb-1">Staff Allocation</p>
-            <p className="text-muted-foreground">Head Chefs: 3 · Sous Chefs: 5 · Helpers: 12 · Service Staff: 15 · Supervisors: 2</p>
-          </div>
-          <div>
-            <p className="font-medium text-gold mb-1">Key Ingredients Required</p>
-            <p className="text-muted-foreground">Rice: 75kg · Dal: 25kg · Vegetables: 40kg · Ghee: 15L · Spices: 8kg · Paneer: 20kg</p>
-          </div>
-        </CardContent>
-      </Card>
+
 
       <div className="flex justify-end">
         <p className="text-lg font-display font-semibold">Total: <span className="text-gold">₹{order.totalCost.toLocaleString()}</span></p>
