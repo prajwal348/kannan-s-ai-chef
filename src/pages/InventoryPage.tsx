@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { inventory } from "@/data/dummy";
-import { Search, Package, AlertTriangle, Sparkles } from "lucide-react";
+import { Search, Package, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 
 const statusStyle = {
