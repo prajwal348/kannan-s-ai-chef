@@ -34,50 +34,6 @@ const trendChartData = wastageData.map((d) => ({
   Paneer: d.paneer,
 }));
 
-// Geopolitical alerts
-const geoAlerts = [
-  {
-    severity: "High" as const,
-    title: "Cooking Oil Price Surge Expected",
-    description: "Indonesia's palm oil export ban extension may increase coconut & sunflower oil prices by 15-20% in the next 2 weeks.",
-    impact: "Oil, Ghee",
-    date: "Mar 24, 2026",
-  },
-  {
-    severity: "Medium" as const,
-    title: "LPG Subsidy Revision",
-    description: "Government reviewing commercial LPG pricing. Expect 8-12% hike in fuel costs from April.",
-    impact: "Fuel/Gas Costs",
-    date: "Mar 22, 2026",
-  },
-  {
-    severity: "Low" as const,
-    title: "Good Monsoon Forecast for Kerala",
-    description: "Favorable monsoon prediction may stabilize coconut and spice prices by Q3 2026.",
-    impact: "Coconut, Spices",
-    date: "Mar 20, 2026",
-  },
-  {
-    severity: "High" as const,
-    title: "Sugar Export Restrictions",
-    description: "India may extend sugar export curbs. Domestic sugar prices likely to drop 5%, benefiting dessert-heavy menus.",
-    impact: "Sugar, Jaggery",
-    date: "Mar 18, 2026",
-  },
-  {
-    severity: "Medium" as const,
-    title: "Tomato Supply Disruption — Karnataka",
-    description: "Unseasonal rains in Karnataka damaging tomato crops. Prices expected to spike 30-40% in South India.",
-    impact: "Tomatoes, Vegetables",
-    date: "Mar 23, 2026",
-  },
-];
-
-const severityStyle = {
-  High: "bg-destructive/10 text-destructive border-destructive/20",
-  Medium: "bg-warning/10 text-warning border-warning/20",
-  Low: "bg-success/10 text-success border-success/20",
-};
 
 export default function WastagePage() {
   const totalAvgWastage = avgWastage.reduce((s, a) => s + a.avg, 0);
