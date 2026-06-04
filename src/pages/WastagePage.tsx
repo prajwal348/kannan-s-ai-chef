@@ -169,53 +169,6 @@ export default function WastagePage() {
           </div>
         </CardContent>
       </Card>
-
-      {/* AI Wastage Insights */}
-      <Card className="shadow-luxury border-gold/30 bg-gradient-to-r from-card to-secondary/30">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg gradient-gold shrink-0"><Sparkles className="h-4 w-4 text-accent-foreground" /></div>
-            <div className="space-y-2">
-              <p className="font-display font-medium text-sm">AI Wastage Reduction Insights</p>
-              <ul className="text-xs text-muted-foreground space-y-1.5">
-                <li>• <strong>Vegetables over-ordered by ~25%</strong> consistently. Reduce prep quantities by 3 kg per 100 pax event.</li>
-                <li>• <strong>Rice wastage spikes</strong> on corporate events — guests prefer variety rice over plain. Adjust ratios.</li>
-                <li>• <strong>Paneer wastage low</strong> — current ordering pattern is well-optimized. Maintain.</li>
-                <li>• <strong>Progressive trend:</strong> Overall wastage reduced 8% from ORD-096 to ORD-005. Keep optimizing portions.</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Geopolitical Alerts Section */}
-      <div className="pt-2">
-        <div className="flex items-center gap-2 mb-4">
-          <Globe className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-display font-semibold">Geopolitical & Market Alerts</h2>
-        </div>
-        <p className="text-muted-foreground text-sm mb-4">Issues affecting supply chain, ingredient prices, and operational costs</p>
-
-        <div className="space-y-3">
-          {geoAlerts.map((alert, i) => (
-            <Card key={i} className="shadow-luxury border-border/50 hover:border-primary/20 transition-colors">
-              <CardContent className="p-4 flex gap-4">
-                <div className="shrink-0 mt-0.5">
-                  <Badge variant="outline" className={severityStyle[alert.severity]}>{alert.severity}</Badge>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-medium text-sm">{alert.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{alert.description}</p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <span className="text-xs text-muted-foreground">Impact: <strong className="text-foreground">{alert.impact}</strong></span>
-                    <span className="text-xs text-muted-foreground">{alert.date}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
